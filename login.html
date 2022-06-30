@@ -601,7 +601,7 @@
                             <div class="fcc pascod" for="password"> 
                                 <span class="material-symbols-outlined">
                                     lock
-                                </span><input id="password" type="password" placeholder="Password" /> 
+                                </span><input id="password2" type="password" placeholder="Password" /> 
                                 <span class="material-symbols-outlined cod" onclick="changeToText()">
                                     visibility
                                     </span><br>
@@ -670,6 +670,13 @@
                 x.type = "text";
             } else {
                 x.type = "password";
+            }
+
+            let i = document.getElementById("password2");
+            if (i.type === "password") {
+                i.type = "text";
+            } else {
+                i.type = "password";
             }
         }
     </script>

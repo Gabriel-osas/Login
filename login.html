@@ -184,9 +184,7 @@
         .fcc {
             width: 100%;
             display: flex;
-            justify-content: center;
-            border: 2px solid white;
-            border-radius: 10px;
+            justify-content: space-between;
             background-color: rgba(193, 188, 236, 0);
             padding-right: 5px;
             margin-top: 20px;
@@ -196,9 +194,11 @@
             background-color: transparent;
             border: none;
             border-radius: 10px;
-            padding: 10px;
+            padding: 10px 10px 10px 30px;
             width: 100%;
             color: rgb(109, 112, 114);
+            border: 2px solid white;
+            
         }
 
         .formsection h1 {
@@ -221,12 +221,14 @@
         }
 
         .formcontrol input {
-            padding: 10px;
+            padding: 10px 10px 10px 30px;
             width: 100%;
-            border-radius: 10px;
+            
             border: 0px;
             color: aliceblue;
             background-color: rgba(193, 188, 236, 0);
+            border: 2px solid white;
+            border-radius: 10px;
         }
 
         .wrap .pp {
@@ -255,13 +257,19 @@
         }
 
         .material-symbols-outlined {
+            position: absolute;
             color: rgb(97, 97, 97);
-            padding-top: 6px;
+            padding-top: 10px;
+            padding-left: 5px;
             cursor: pointer;
         }
         .details a {
             cursor: pointer;
             font-weight: 700;
+        }
+        .cod {
+            right: 0;
+            margin-right: 60px;
         }
     </style>
 </head>
@@ -561,8 +569,8 @@
                             <div class="fcc pascod" for="password"> 
                                 <span class="material-symbols-outlined">
                                     lock
-                                </span><input type="password" placeholder="Password" /> 
-                                <span class="material-symbols-outlined" onclick="changeToText()">
+                                </span><input id="password" type="password" placeholder="Password" /> 
+                                <span class="material-symbols-outlined cod" onclick="changeToText()">
                                     visibility
                                     </span><br>
                             </div>
@@ -593,8 +601,8 @@
                             <div class="fcc pascod" for="password"> 
                                 <span class="material-symbols-outlined">
                                     lock
-                                </span><input type="password" placeholder="Password" /> 
-                                <span class="material-symbols-outlined" onclick="changeToText()">
+                                </span><input id="password" type="password" placeholder="Password" /> 
+                                <span class="material-symbols-outlined cod" onclick="changeToText()">
                                     visibility
                                     </span><br>
                             </div>
@@ -651,6 +659,18 @@
             document.getElementById("forgetpassword").style.display = "none";
             document.getElementById("signin").style.display = "none";
             document.getElementById("signup").style.display = "block";
+        }
+
+        function changeToText() {
+            // document.getElementById("password");
+            // if(type==="password"){type="text";}else{type="password";}
+            // document.getElementById('password').innerHTML = "input";
+            let x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
         }
     </script>
 </body>
